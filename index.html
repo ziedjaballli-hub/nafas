@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafas - Breath & Growth</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            background-color: #01241d; /* Darker, richer forest green */
+            margin: 0;
+            overflow-x: hidden;
+            color: #f0fdf4;
+        }
+        .rtl {
+            direction: rtl;
+        }
+
+        /* High-Clarity Golden Emerald Mesh */
+        .bg-mesh {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(at 0% 0%, #064e3b 0px, transparent 50%),
+                        radial-gradient(at 100% 0%, #01241d 0px, transparent 50%),
+                        radial-gradient(at 100% 100%, #064e3b 0px, transparent 50%),
+                        radial-gradient(at 0% 100%, #01241d 0px, transparent 50%);
+            overflow: hidden;
+        }
+
+        .bg-mesh::before, .bg-mesh::after {
+            content: "";
+            position: absolute;
+            width: 1200px;
+            height: 1200px;
+            border-radius: 50%;
+            filter: blur(180px);
+            opacity: 0.2;
+            animation: move 25s infinite alternate ease-in-out;
+        }
+
+        .bg-mesh::before {
+            background: radial-gradient(circle, #f59e0b 0%, transparent 60%); /* Vibrant Amber */
+            top: -400px;
+            left: -400px;
+        }
+
+        .bg-mesh::after {
+            background: radial-gradient(circle, #10b981 0%, transparent 60%); /* Vibrant Emerald */
+            bottom: -400px;
+            right: -400px;
+            animation-delay: -12.5s;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(300px, 300px) scale(1.2); }
+        }
+
+        .glass-card {
+            background: rgba(1, 36, 29, 0.75); /* Increased opacity for clarity */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #f59e0b;
+            border-radius: 10px;
+        }
+
+        .gold-border {
+            border: 2px solid rgba(245, 158, 11, 0.4);
+        }
+        .gold-text {
+            color: #fbbf24;
+        }
+        .emerald-text {
+            color: #34d399;
+        }
+        
+        h1, h2, h3 {
+            letter-spacing: -0.025em;
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-DJbVtS-L.js"></script>
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div id="root"></div>
+</body>
+</html>
